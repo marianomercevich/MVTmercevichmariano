@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatosFamiliares</title>
+</head>
+<body>
+    <h1>DATOS DE MIS FAMILIARES!</h1>
+    <H2>FAMILIARES</H2>
+    <table>
+        <thead>
+            <td>NOMBRE</td>
+            <td>APELLIDO</td> 
+            <td>NACIMIENTO</td> 
+            <td>EDAD</td> 
+            <td>E-MAIL</td> 
+            <td>TELEFONO</td> 
+        </thead>
+                {% for Familiares in Familiar %}
+                <tr>
+                    <td>{{ Familiares.Nombre }}</td>
+                    <td>{{ Familiares.Apellido }}</td>
+                    <td>{{ Familiares.fecha_de_nacimento }}</td>
+                    <td>{{ Familiares.edad }}</td>
+                    <td>{{ Familiares.email }}</td>
+                    <td>{{ Familiares.telefono }}</td>
+                </tr>
+                {% endfor %}
+    </table>
+</body>
+</html>
